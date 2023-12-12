@@ -20,17 +20,36 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+# DATO CMS
 
-To learn more about Next.js, take a look at the following resources:
+## cma-client-node
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### EXAMPLES
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Look at: **lib/datocmsimporttest.js**
 
-## Deploy on Vercel
+### CREATE MIGRATION
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+$ npx datocms migrations:new 'create article model' --api-token=<YOUR-API-TOKEN>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+```
+
+### RUN MIGRATIONS
+
+For migrations we should use this documentation https://www.datocms.com/docs/content-management-api
+
+```bash
+$ npx datocms migrations:run --api-token=<YOUR-API-TOKEN>
+# or
+$ npx datocms migrations:run --destination=feature-environment --api-token=<YOUR-API-TOKEN>
+# or
+$ npx datocms migrations:run --source=feature-environment --in-place --api-token=<YOUR-API-TOKEN>
+```
+
+### ADD NEW FIELD WITH BLOCK
+
+If you add new field with block, you should use right ID from url not from popup window
+
+![alt text](datocms1.png "Title")

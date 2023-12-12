@@ -2,26 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    width: 90%;
+    margin: auto;
+}
+
+.nav {
+    margin:30px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 2px solid coral;
+}
+
+.nav div {
+    text-decoration: underline;
+}
+
+.nav div:hover {
+    color: coral;
+}
+
+.nav div a {
+    font-weight: bold;
+}
+
+.content {
+    padding: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-size:23px;
+    font-weight:bold;
+    margin:20px auto;
+}
+
+.recipe_block {
+    width: 200px;
+    padding: 20px;
+    margin: 5px;
+    border: 1px solid green;
+}
+
+button {
+    background-color: coral;
+    color: #fff;
+    padding: 15px 30px 15px 30px;
+    margin: 20px auto;
+}
+
+.category_content, .recipe_content {
+    display: flex;
+    justify-content: start;
+    align-content: flex-start;
+    margin-bottom: 50px;
+}
+
+.category_text, .recipe_text {
+    text-align: left;
+    padding: 0 10% 30px 10%;
+    margin-left: 10%;
+}
+
+.recipe_img {
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.recipe_descr_img {
+    max-height: 100px;
+    width:auto;
+    float:left;
+    margin-right: 5px;
+    margin-top: 40px;
+}
+
+.step_block {
+    display:flex;
+    justify-content: space-between;
+}
+
+.step_block > div {
+    width:300px;
+    text-align: justify;
+    padding: 10px;
+    margin: 10px;
 }
